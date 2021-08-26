@@ -12,6 +12,15 @@ Install with:
 {:live_analytics, git: "https://github.com/askasp-lang/live_analytics.git"}
 ```
 
+In your router.ex put
+
+```elixir
+      live_dashboard("/dashboard",
+        metrics: MartinstestWeb.Telemetry,
+--->    additional_pages: [live_analytics: LiveAnalytics] <-----
+      )
+```
+
 and in your config.exs put
 
 ```elixir
