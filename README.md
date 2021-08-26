@@ -1,22 +1,21 @@
 # LiveAnalytics
 
-**TODO: Add description**
+A small tool to add an ecto repo analytics tab to live dashboard. It queries
+the database at configurable interval and present inserts per day
 
-## Installation
+![Alt text](Supervisor tree)
+<img src="img/live_analytics.jpg">
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `live_analytics` to your list of dependencies in `mix.exs`:
+Install with:
 
 ```elixir
-def deps do
-  [
-    {:live_analytics, "~> 0.1.0"}
-  ]
-end
+{:live_analytics, git: "https://github.com/askasp-lang/live_analytics.git"}
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/live_analytics](https://hexdocs.pm/live_analytics).
+and in your config.exs put
 
-# live_analytics
+```elixir
+config :live_analytics, :app_name, {{your_app_name}} 
+config :live_analytics, :poll_interval_ms, {{your_chosen, default is 15000}}
+```
+
