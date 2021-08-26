@@ -1,7 +1,9 @@
 # LiveAnalytics
 
 A small tool to add an ecto repo analytics tab to live dashboard. It queries
-the database at configurable interval and present inserts per day
+the database at configurable interval and present inserts per day. 
+
+In it's current form it's not very scaleable and results from previous days should be cached.
 
 ![Alt text](Supervisor tree)
 <img src="img/live_analytics.jpg">
